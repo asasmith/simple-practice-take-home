@@ -1,7 +1,7 @@
 export default function () {
     this.namespace = 'api';
 
-    this.get('/cpt-code', function (schema) {
+    this.get('/cpt-codes', function (schema) {
         return schema.cptCodes.all();
     });
 }
