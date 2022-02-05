@@ -1,7 +1,11 @@
 module.exports = {
     content: ['./app/**/*.hbs'],
     theme: {
-        extend: {},
+        extend: {
+            container: () => ({
+                center: true,
+            }),
+        },
     },
     plugins: [],
 };
