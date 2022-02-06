@@ -5,7 +5,7 @@ export default function () {
         return schema.cptCodes.all();
     });
 
-    this.get('/locations', function (schema) {
-        return schema.locations.all();
+    this.get('/offices', function (schema) {
+        return schema.offices.all();
     });
 }

@@ -1,17 +1,17 @@
 import { Factory } from 'miragejs';
-import faker from '@fakerjs/faker';
+import faker from '@faker-js/faker';
 
 export default Factory.extend({
-    name() {
-        return faker.lorem.words();
-    },
-
     phone() {
-        return faker.phone.phoneNumber();
+        return faker.phone.phoneNumberFormat();
     },
 
     isVideo() {
         return faker.datatype.boolean();
+    },
+
+    name() {
+        return this.isVideo ? 'video office' : 'office location';
     },
 
     geoLocation() {
