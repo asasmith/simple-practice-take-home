@@ -12,9 +12,8 @@
 					<p class="text-xl">{{service.description}}</p>
 					<p class="text-slate-500">{{service.duration}} minutes</p>
 				</div>
-				<button class="bg-green-700 font-bold px-4 rounded text-white uppercase" type="button">Select</button>
+				<button class="bg-green-700 font-bold px-4 rounded text-white uppercase" {{on "click" this.onLocationSelect}} type="button">Select</button>
 			</div>
 		{{/each}}
 	</div>
 </div>
-{{outlet}}

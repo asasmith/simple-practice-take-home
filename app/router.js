@@ -9,5 +9,6 @@ export default class Router extends EmberRouter {
 Router.map(function () {
     this.route('request', function () {
         this.route('service');
+        this.route('location');
     });
 });
