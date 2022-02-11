@@ -7,6 +7,8 @@ export default class RequestServiceController extends Controller {
 
     @action
     onLocationSelect() {
-        this.router.transitionTo('request.location');
+        const { router } = this;
+
+        router.transitionTo('request.location');
     }
 }
