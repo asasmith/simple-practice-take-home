@@ -1,0 +1,15 @@
+<li class="mb-4">
+	{{#if @isComplete}}
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon" aria-label="Completed step">
+			<path fill-rule="evenodd" d="M12 1a11 11 0 100 22 11 11 0 000-22zm6.58 7.48a.75.75 0 10-1.16-.96l-6.47 7.87-3.42-3.42a.75.75 0 00-1.06 1.06l4 4a.75.75 0 001.1-.05l7-8.5z" clip-rule="evenodd"></path>
+		</svg>
+		<span class="capitalize text-slate-500">{{@text}}</span>
+	{{/if}}
+	{{#if @isActive}}
+		<span class="bg-black h-5 inline-block leading-snug mr-2 w-5 rounded-full text-center text-sm text-white">{{@order}}</span>
+		<span class="capitalize">{{@text}}</span>
+	{{else}}
+		<span class="bg-slate-500 h-5 inline-block leading-snug mr-2 w-5 rounded-full text-center text-sm text-white">{{@order}}</span>
+		<span class="capitalize text-slate-500">{{@text}}</span>
+	{{/if}}
+</li>

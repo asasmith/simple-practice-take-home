@@ -1,0 +1,11 @@
+<ul class="p-3 w-1/4">
+    {{#each this.appointmentSteps.steps as |step index| }}
+		<AppointmentSteps::StepLink
+			@index={{index}}
+			@isComplete={{step.isComplete}}
+			@isActive={{step.isActive}}
+			@order={{step.order}}
+			@text={{step.text}}
+		/>
+	{{/each}}
+</ul>
