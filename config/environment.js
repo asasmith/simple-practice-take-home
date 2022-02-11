@@ -20,6 +20,8 @@ module.exports = function (environment) {
         APP: {
             // Here you can pass flags/options to your application instance
             // when it is created
+            clientPortalUrl: 'https://johnny-appleseed.clientsecure.me',
+            id: 2,
         },
     };
 
