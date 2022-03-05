@@ -1,8 +1,9 @@
 import Service from '@ember/service';
 import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
 export default class AppointmentStepsService extends Service {
-    steps = [
+    @tracked steps = [
         {
             order: 1,
             text: 'select service',
@@ -29,11 +30,8 @@ export default class AppointmentStepsService extends Service {
         },
     ];
 
-    @action
     setIsActive(currentStep) {
-        const { steps } = this;
-
-        steps.forEach((step) => {
+        this.steps.forEach((step) => {
             if (step.order === currentStep) {
                 step.isActive = true;
             } else {
